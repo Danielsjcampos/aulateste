@@ -143,11 +143,27 @@ export default function CopaHomePage() {
                       Abrir Álbum
                     </Link>
                     <Link
+                      href={`/copa/${album.id}/faltantes`}
+                      className="py-2 rounded-xl text-center font-bold text-sm transition-opacity hover:opacity-90"
+                      style={{ background: 'rgba(248,113,113,0.15)', color: '#f87171', border: '1px solid rgba(248,113,113,0.25)' }}
+                    >
+                      ❌ Faltantes
+                    </Link>
+                  </div>
+                  <div className="grid grid-cols-2 gap-2 mb-2">
+                    <Link
                       href={`/copa/${album.id}/busca`}
                       className="py-2 rounded-xl text-center font-bold text-sm transition-opacity hover:opacity-90"
-                      style={{ background: 'rgba(255,255,255,0.08)', color: 'white' }}
+                      style={{ background: 'rgba(255,215,0,0.1)', color: '#FFD700', border: '1px solid rgba(255,215,0,0.2)' }}
                     >
-                      Busca Rápida
+                      🔍 Busca
+                    </Link>
+                    <Link
+                      href={`/copa/${album.id}/repetidas`}
+                      className="py-2 rounded-xl text-center font-bold text-sm transition-opacity hover:opacity-90"
+                      style={{ background: 'rgba(255,255,255,0.06)', color: 'white', border: '1px solid rgba(255,255,255,0.1)' }}
+                    >
+                      🔁 Repetidas
                     </Link>
                   </div>
                   <div className="grid grid-cols-2 gap-2">

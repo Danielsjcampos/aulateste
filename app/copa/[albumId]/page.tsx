@@ -78,6 +78,9 @@ export default function AlbumPage({ params }: PageProps) {
       <div className="max-w-5xl mx-auto px-4 py-6">
         {/* Quick actions */}
         <div className="flex flex-wrap gap-2 mb-6">
+          <Link href={`/copa/${albumId}/faltantes`} className="px-4 py-2 rounded-xl text-sm font-bold transition-opacity hover:opacity-80" style={{ background: 'rgba(248,113,113,0.15)', color: '#f87171', border: '1px solid rgba(248,113,113,0.35)' }}>
+            ❌ Faltantes ({stats.missing})
+          </Link>
           <Link href={`/copa/${albumId}/busca`} className="px-4 py-2 rounded-xl text-sm font-bold transition-opacity hover:opacity-80" style={{ background: 'rgba(255,215,0,0.12)', color: '#FFD700', border: '1px solid rgba(255,215,0,0.25)' }}>
             🔍 Busca Rápida
           </Link>
